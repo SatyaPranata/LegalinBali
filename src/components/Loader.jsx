@@ -20,7 +20,7 @@ export default function Loader() {
     >
       {/* Animated leaf SVG */}
       <div className="animate-pulse2 mb-5">
-        <img src="../public/img/legalinbali.png" alt="" className='h-60'/>
+        <img src="/img/legalinbali.png" alt="" className='h-60'/>
       </div>
     </div>
   )

@@ -25,7 +25,7 @@ export default function About() {
         {/* ── Visual collage ── */}
         <Section className="relative h-[480px] hidden lg:block">
           {/* Main card */}
-          <img src="../public/img/Gambar Bangunan.jpg"
+          <img src="/img/Gambar Bangunan.jpg"
             className="absolute top-0 left-0 w-3/4 h-[380px] rounded-3xl overflow-hidden
                        bg-gradient-to-br 
                        flex items-center justify-center text-8xl

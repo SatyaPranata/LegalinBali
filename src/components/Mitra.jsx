@@ -106,14 +106,13 @@ export default function Sponsors() {
 
         {/* ── Header ── */}
         <Section className="text-center px-6 mb-14">
-          <div className="inline-block border border-white/25 text-white/80 text-xs font-mono
-                          uppercase tracking-[0.2em] px-4 py-1.5 rounded-full mb-4
+          <div className="inline-block border border-white/25 text-white/80  tracking-[0.2em] px-4 py-1.5 rounded-full mb-4
                           bg-white/10 backdrop-blur-sm">
-            Mitra & Sponsorship
+            Mitra & Kerja Sama
           </div>
           <h2 className="font-display text-4xl lg:text-5xl font-black text-white mb-4">
             Dipercaya & Bermitra dengan{' '}
-            <em className="not-italic text-green-200">Institusi Terkemuka</em>
+            <em className="not-italic text-green-400">Institusi Terkemuka</em>
           </h2>
           <p className="text-white/60 text-base max-w-2xl mx-auto leading-relaxed">
             Greenvilla menjalin kerjasama strategis dengan berbagai instansi pemerintah,
@@ -144,9 +143,9 @@ export default function Sponsors() {
 
         {/* ── CTA kecil ── */}
         <Section className="text-center mt-10 px-6">
-          <p className="text-white/50 text-sm mb-4">Tertarik bermitra dengan Greenvilla?</p>
+          <p className="text-white/50 text-sm mb-4">Tertarik bermitra dengan Legalin Bali?</p>
           
-           <a href="#kontak"
+           <a href="/kontak"
             className="inline-flex items-center gap-2 bg-white text-green-700
                        font-semibold text-sm px-6 py-2.5 rounded-full
                        hover:bg-green-50 hover:shadow-xl hover:-translate-y-0.5
