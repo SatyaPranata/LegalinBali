@@ -1,7 +1,8 @@
 {
-  "name": "greenvilla",
+  "name": "legalinbali",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://satyapranata.github.io/LegalinBali/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,6 +19,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   }
 }
