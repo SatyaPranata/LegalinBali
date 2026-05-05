@@ -1,4 +1,4 @@
-import Section from './Section'
+import Section from "./Section";
 
 export default function CTA() {
   return (
@@ -20,38 +20,38 @@ export default function CTA() {
                          text-white text-xs font-semibold uppercase tracking-widest
                          px-4 py-1.5 rounded-full mb-6"
             >
-              🌍 Bergabung Bersama 2.400+ Keluarga
+              100+ Legalitas Tuntas
             </div>
 
             <h2 className="font-display text-4xl lg:text-5xl font-black text-white mb-5 leading-tight">
-              Mulai Perjalanan Eco-Living<br />Anda Hari Ini
+              Mulai Legalitas Usaha
+              <br />
+              Anda Hari Ini
             </h2>
-            <p className="text-white/80 text-base lg:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-              Konsultasikan kebutuhan hunian ramah lingkungan Anda dengan tim ahli kami.
-              Gratis, tanpa komitmen, dan tanpa tekanan.
-            </p>
+            <p className="text-white/80 text-base lg:text-lg mb-10 max-w-xl mx-auto leading-relaxed">Konsultasikan legalitas usaha anda dengan tim ahli kami. Gratis.</p>
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="bg-white text-green-700 font-bold px-8 py-3.5 rounded-full
+              <button
+                className="bg-white text-green-700 font-bold px-8 py-3.5 rounded-full
                                  hover:bg-green-50 hover:-translate-y-0.5 hover:shadow-xl
-                                 transition-all duration-200 active:scale-95">
-                🌿 Konsultasi Gratis
+                                 transition-all duration-200 active:scale-95"
+              >
+                Konsultasi Gratis
               </button>
-              <button className="btn-outline-white">
-                Lihat Semua Properti →
-              </button>
+              <a href="/properti">
+                <button className="btn-outline-white">Lihat Semua Proyek →</button>
+              </a>
             </div>
 
             {/* Trust signals */}
             <div className="flex flex-wrap justify-center gap-6 mt-10 text-white/60 text-xs">
-              <span>✓ Tanpa biaya awal</span>
-              <span>✓ Tim ahli bersertifikasi</span>
-              <span>✓ Garansi 10 tahun</span>
-              <span>✓ Purna jual terpercaya</span>
+              <span>✓ Gratis Konsultasi</span>
+              <span>✓ Konsultasi Bersama Tim Ahli</span>
+              <span>✓ Aman & Terkendali</span>
             </div>
           </div>
         </div>
       </Section>
     </section>
-  )
+  );
 }

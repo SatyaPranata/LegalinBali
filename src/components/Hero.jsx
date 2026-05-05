@@ -77,13 +77,15 @@ export default function Hero() {
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white
                          leading-[1.08] mb-5"
           >
-            Temukan Rumah <em className="not-italic text-green-400">Eco‑Friendly</em> Impian Anda
+            Legalin Bali <em className="not-italic text-green-400">Solusi Legalitas</em> Usaha Anda
           </h1>
 
-          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">Kami menghadirkan properti berkelanjutan yang harmonis dengan alam. Nikmati kehidupan nyaman tanpa mengorbankan lingkungan.</p>
+          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">Kami menghadirkan berbagai legalitas usaha. tanpa melanggar aturan.</p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <button className="btn-primary">Tentang Kami</button>
+            <a href="">
+              <button className="btn-primary">Tentang Kami</button>
+            </a>
             <button className="btn-outline-white">Layanan Kami</button>
           </div>
 
