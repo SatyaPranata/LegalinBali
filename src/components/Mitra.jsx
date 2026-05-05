@@ -1,0 +1,165 @@
+import Section from './Section'
+
+const SPONSORS_ROW1 = [
+  { name: 'Bank BNI',         initials: 'BNI',   color: '#FF6600', bg: '#FFF3E8', logo: `/img/Logo.svg` },
+  { name: 'Notaris Bali',     initials: 'NB',    color: '#1A5276', bg: '#EBF5FB' },
+  { name: 'Kemenkumham RI',   initials: 'KKH',   color: '#145A32', bg: '#E9F7EF' },
+  { name: 'Dinas PUPR Bali',  initials: 'PUPR',  color: '#7D6608', bg: '#FEF9E7' },
+  { name: 'OSS Indonesia',    initials: 'OSS',   color: '#1F618D', bg: '#EAF2F8' },
+  { name: 'DJKI Kemenkumham', initials: 'DJKI',  color: '#6C3483', bg: '#F5EEF8' },
+  { name: 'Asosiasi Notaris', initials: 'ANI',   color: '#1A5276', bg: '#EBF5FB' },
+]
+
+const SPONSORS_ROW2 = [
+  { name: 'Bank BRI',         initials: 'BRI',   color: '#1F618D', bg: '#EAF2F8' },
+  { name: 'BKPM / DPMPTSP',  initials: 'BKPM',  color: '#117A65', bg: '#E8F8F5' },
+  { name: 'Pengadilan Negeri',initials: 'PN',    color: '#922B21', bg: '#FDEDEC' },
+  { name: 'Badan Pertanahan', initials: 'BPN',   color: '#6E2F1A', bg: '#FAE5D3' },
+  { name: 'HIPMI Bali',       initials: 'HIPMI', color: '#154360', bg: '#EAF2F8' },
+  { name: 'Kadin Bali',       initials: 'KADIN', color: '#7B241C', bg: '#FDEDEC' },
+  { name: 'Peradi Bali',      initials: 'PRDI',  color: '#145A32', bg: '#E9F7EF' },
+]
+
+const STATS = [
+  { n: '30+',  l: 'Instansi Mitra' },
+  { n: '8+',   l: 'Tahun Kerjasama' },
+  { n: '500+', l: 'Izin Diselesaikan' },
+  { n: '98%',  l: 'Tingkat Keberhasilan' },
+]
+
+function LogoCard({ name, initials, color, bg, logo }) {
+  return (
+    <div className="flex-shrink-0 mx-4 group cursor-default
+                    bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl px-6 py-5
+                    flex flex-col items-center justify-center gap-3
+                    w-[160px] h-[110px]
+                    hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-xl
+                    transition-all duration-300">
+      {logo ? (
+        <img
+          src={logo}
+          alt={name}
+          className="h-10 w-auto object-contain brightness-0 invert
+                     group-hover:brightness-100 group-hover:invert-0
+                     transition-all duration-300"
+        />
+      ) : (
+        <div
+          className="w-12 h-12 rounded-xl flex items-center justify-center
+                     font-bold text-sm tracking-wide bg-white/20 text-white
+                     group-hover:scale-110 group-hover:text-current
+                     transition-all duration-300"
+          style={{ '--hover-bg': bg, '--hover-color': color }}
+        >
+          <span className="group-hover:hidden">{initials}</span>
+          <span
+            className="hidden group-hover:flex w-full h-full rounded-xl
+                       items-center justify-center text-sm font-bold"
+            style={{ backgroundColor: bg, color }}
+          >
+            {initials}
+          </span>
+        </div>
+      )}
+      <span className="text-[11px] text-white/60 text-center leading-tight font-medium
+                       group-hover:text-gray-600 transition-colors">
+        {name}
+      </span>
+    </div>
+  )
+}
+
+function MarqueeRow({ items, reverse = false }) {
+  const doubled = [...items, ...items]
+  return (
+    <div className="overflow-hidden marquee-wrap">
+      <div className={reverse ? 'marquee-track-reverse' : 'marquee-track'}>
+        {doubled.map((s, i) => (
+          <LogoCard key={`${s.name}-${i}`} {...s} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default function Sponsors() {
+  return (
+    <section className="py-24 overflow-hidden relative bg-gradient-to-br from-green-800 via-green-700 to-green-600">
+
+      {/* Decorative orbs */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-900/40 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Dot pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.07] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
+        }}
+      />
+
+      {/* Top border accent */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+      <div className="relative z-10">
+
+        {/* ── Header ── */}
+        <Section className="text-center px-6 mb-14">
+          <div className="inline-block border border-white/25 text-white/80 text-xs font-mono
+                          uppercase tracking-[0.2em] px-4 py-1.5 rounded-full mb-4
+                          bg-white/10 backdrop-blur-sm">
+            Mitra & Sponsorship
+          </div>
+          <h2 className="font-display text-4xl lg:text-5xl font-black text-white mb-4">
+            Dipercaya & Bermitra dengan{' '}
+            <em className="not-italic text-green-200">Institusi Terkemuka</em>
+          </h2>
+          <p className="text-white/60 text-base max-w-2xl mx-auto leading-relaxed">
+            Greenvilla menjalin kerjasama strategis dengan berbagai instansi pemerintah,
+            perbankan, dan asosiasi profesional untuk memberikan layanan terbaik bagi klien kami.
+          </p>
+        </Section>
+
+        {/* ── Marquee rows ── */}
+        <div className="mb-5">
+          <MarqueeRow items={SPONSORS_ROW1} reverse={false} />
+        </div>
+        <div className="mb-14">
+          <MarqueeRow items={SPONSORS_ROW2} reverse={true} />
+        </div>
+
+        {/* ── Stats bar ── */}
+        <Section className="px-6">
+          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md border border-white/15
+                          rounded-3xl px-8 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {STATS.map(({ n, l }) => (
+              <div key={l} className="text-center">
+                <div className="font-display text-3xl font-black text-white">{n}</div>
+                <div className="text-white/50 text-xs uppercase tracking-widest mt-1.5">{l}</div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* ── CTA kecil ── */}
+        <Section className="text-center mt-10 px-6">
+          <p className="text-white/50 text-sm mb-4">Tertarik bermitra dengan Greenvilla?</p>
+          
+           <a href="#kontak"
+            className="inline-flex items-center gap-2 bg-white text-green-700
+                       font-semibold text-sm px-6 py-2.5 rounded-full
+                       hover:bg-green-50 hover:shadow-xl hover:-translate-y-0.5
+                       transition-all duration-200 shadow-md"> 
+          
+            Hubungi Kami →
+          </a>
+        </Section>
+
+      </div>
+
+      {/* Bottom border accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+    </section>
+  )
+}

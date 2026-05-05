@@ -3,7 +3,7 @@ import Hero         from '../components/Hero'
 import About        from '../components/About'
 import Properties   from '../components/Properties'
 import Services     from '../components/Services'
-import Testimonials from '../components/Testimonials'
+import Mitra from '../components/Mitra'
 import CTA          from '../components/CTA'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <About />
       <Properties />
       <Services />
-      <Testimonials />
+      <Mitra />
       <CTA />
     </>
   )

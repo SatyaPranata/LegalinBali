@@ -67,9 +67,9 @@ function PropertyCard({ prop, delay }) {
 
         <button
           className="w-full bg-green-100 text-green-700 font-semibold py-3 rounded-2xl
-                     hover:bg-green-600 hover:text-white transition-all duration-200
-                     active:scale-95 text-sm"
-        >
+          hover:bg-green-600 hover:text-white transition-all duration-200
+          active:scale-95 text-sm"
+          >
           Lihat Detail →
         </button>
       </div>
@@ -138,7 +138,9 @@ export default function Properties() {
         </div>
 
         <Section className="text-center mt-12">
+          <a href="/properti">
           <button className="btn-outline-green">Lihat Semua Properti →</button>
+          </a>
         </Section>
       </div>
     </section>
