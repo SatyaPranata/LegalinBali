@@ -11,8 +11,8 @@ export default function CTA() {
                      shadow-2xl shadow-green-600/30"
         >
           {/* Decoration */}
-          <div className="absolute -top-16 -right-16 text-[220px] opacity-[0.07] select-none">🌿</div>
-          <div className="absolute -bottom-12 -left-12 text-[160px] opacity-[0.07] select-none rotate-45">🍃</div>
+          <div className="absolute -top-16 -right-16 text-[220px] opacity-[0.07] select-none"></div>
+          <div className="absolute -bottom-12 -left-12 text-[160px] opacity-[0.07] select-none rotate-45"></div>
 
           <div className="relative z-10">
             <div

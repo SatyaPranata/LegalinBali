@@ -83,10 +83,12 @@ export default function Hero() {
           <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">Kami menghadirkan berbagai legalitas usaha. tanpa melanggar aturan.</p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <a href="">
+            <a href="/tentang">
               <button className="btn-primary">Tentang Kami</button>
             </a>
-            <button className="btn-outline-white">Layanan Kami</button>
+            <a href="/layanan">
+              <button className="btn-outline-white">Layanan Kami</button>
+            </a>
           </div>
 
           <div className="flex flex-wrap gap-9 md:max-w-md sm:max-w-sm p-2 backdrop-blur-md items-center justify-center border border-white/25 rounded-3xl">

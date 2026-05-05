@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const NAV_LINKS = [
   { name: "Beranda", path: "/" },
-  { name: "Properti", path: "/properti" },
+  { name: "Proyek", path: "/proyek" },
   { name: "Layanan", path: "/layanan" },
   { name: "Tentang Kami", path: "/tentang" },
   { name: "Kontak", path: "/kontak" },
@@ -34,7 +34,7 @@ export default function Navbar() {
         {/* <Link to="/" className="font-display text-2xl font-black text-green-600 tracking-tight">
           Green<span className="text-green-400">villa</span>
         </Link> */}
-        <img src="../public/img/logolegalinbali.svg" alt="" className="h-36" />
+        <img src="/img/logolegalinbali.svg" alt="" className="h-36" />
 
         {/* Desktop links */}
         <ul className="hidden md:flex gap-8 list-none">
