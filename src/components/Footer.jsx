@@ -7,9 +7,9 @@ const FOOTER_LINKS = {
 }
 
 const SOCIALS = [
-  { label: '/img/.svg', name: 'Instagram', href: ''},
-  { label: '/img/.svg', name: 'Gmail', href: ''},
-  { label: '/img/.svg',  name: 'Google Maps', href: ''},
+  { label: '/img/icon-instagram.svg', name: 'Instagram', href: ''},
+  { label: '/img/icon-gmail.svg', name: 'Gmail', href: ''},
+  { label: '/img/icon-location.svg',  name: 'Google Maps', href: ''},
 ]
 
 export default function Footer() {
@@ -34,15 +34,23 @@ export default function Footer() {
 
               {/* Social icons */}
               <div className="flex gap-3">
-                {SOCIALS.map(({ label, name }) => (
-                  <button
+                {SOCIALS.map(({ label, name, href }) => (
+                  <a href={href}
                     key={name}
                     aria-label={name}
-                    className="w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center
-                               hover:bg-green-600 transition-colors duration-200 text-sm"
-                  >
-                    {label}
-                  </button>
+                    className="group w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center
+                              hover:bg-green-600 transition-colors duration-200">
+
+                    
+                  
+                    <img
+                      src={label}
+                      alt={name}
+                      className="w-5 h-5 brightness-0 invert
+                                group-hover:brightness-100 group-hover:invert-0
+                                transition-all duration-300"
+                    />
+                  </a>
                 ))}
               </div>
             </div>
