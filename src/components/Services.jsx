@@ -2,24 +2,24 @@ import Section from "./Section";
 
 const SERVICES = [
   {
-    icon: "🏗️",
-    title: "Konstruksi Hijau",
-    desc: "Pembangunan menggunakan material eco-friendly bersertifikat internasional.",
+    icon: "/img/icon-pbg&slf.svg",
+    title: "PBG & SLF",
+    desc: "Pembuatan izin bangunan gedung sesuai bidang bisnis anda",
   },
   {
-    icon: "🌳",
-    title: "Desain Lansekap",
-    desc: "Taman tropis terintegrasi yang mempercantik dan mendinginkan hunian Anda.",
+    icon: "/img/icon-timbangan.svg",
+    title: "Pendirian Badan Usaha",
+    desc: "Pengurusan PT, CV, hingga legalitas awal usaha Anda secara lengkap dan resmi.",
   },
   {
-    icon: "⚡",
-    title: "Instalasi Energi",
-    desc: "Sistem solar panel dan pengelolaan energi pintar untuk efisiensi maksimal.",
+    icon: "/img/icon-surat.svg",
+    title: "Perizinan OSS & NIB",
+    desc: "Proses Nomor Induk Berusaha dan perizinan berbasis OSS dengan mudah dan cepat.",
   },
   {
-    icon: "🔧",
-    title: "Perawatan Rutin",
-    desc: "Tim ahli berpengalaman siap merawat seluruh sistem eco-living Anda.",
+    icon: "/img/icon-usaha.svg",
+    title: "Perizinan Operasional",
+    desc: "Pengurusan izin usaha sesuai bidang bisnis agar siap beroperasi tanpa kendala.",
   },
 ];
 
@@ -38,9 +38,9 @@ export default function Services() {
           {/* Left — text */}
           <Section>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Layanan Kami</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-black text-dark leading-[1.1] mb-5">Solusi Lengkap untuk Hunian Ramah Lingkungan</h2>
+            <h2 className="font-display text-4xl lg:text-5xl font-black text-dark leading-[1.1] mb-5">Solusi Lengkap untuk Legalitas Usaha Anda</h2>
             <p className="text-gray-500 text-base leading-relaxed mb-9 max-w-xl">
-              Dari konsultasi awal hingga purna jual, kami mendampingi Anda di setiap langkah perjalanan memiliki rumah impian berkelanjutan. Kepuasan Anda adalah prioritas utama kami.
+              Dari tahap awal hingga bisnis Anda siap berjalan, kami mendampingi setiap proses perizinan dengan sistem yang terstruktur, cepat, dan sesuai regulasi. Fokus Anda pada bisnis, urusan legalitas biar kami yang tangani.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="btn-primary">Lihat Semua Layanan Kami</button>
@@ -63,7 +63,11 @@ export default function Services() {
                     className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center
                                text-2xl mb-4 group-hover:bg-green-600 transition-colors duration-300"
                   >
-                    {icon}
+                    <img
+                    src={icon}
+                    alt={title}
+                    className="w-7 h-7 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                  />
                   </div>
                   <h4 className="font-bold text-dark text-sm mb-2">{title}</h4>
                   <p className="text-gray-400 text-xs leading-relaxed">{desc}</p>

@@ -173,7 +173,7 @@ export default function TentangKami() {
       </section>
 
       {/* Team */}
-      <section className="py-20 px-6 bg-cream">
+      <section id='timkami' className="py-20 px-6 bg-cream">
         <div className="max-w-7xl mx-auto">
           <Section className="text-center mb-14">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Tim Kami</p>

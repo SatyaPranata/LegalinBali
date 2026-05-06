@@ -21,10 +21,10 @@ const SPONSORS_ROW2 = [
 ]
 
 const STATS = [
-  { n: '30+',  l: 'Instansi Mitra' },
-  { n: '8+',   l: 'Tahun Kerjasama' },
-  { n: '500+', l: 'Izin Diselesaikan' },
-  { n: '98%',  l: 'Tingkat Keberhasilan' },
+  { n: '30+',  l: 'Mitra Strategis' },
+  { n: '5+',   l: 'Tahun Pengalaman' },
+  { n: '100+', l: 'Perizinan Diselesaikan' },
+  { n: '100%',  l: 'Tingkat Keberhasilan' },
 ]
 
 function LogoCard({ name, initials, color, bg, logo }) {
@@ -70,11 +70,12 @@ function LogoCard({ name, initials, color, bg, logo }) {
 }
 
 function MarqueeRow({ items, reverse = false }) {
-  const doubled = [...items, ...items]
+  const tripled = [...items, ...items, ...items]
+
   return (
-    <div className="overflow-hidden marquee-wrap">
+    <div className="overflow-hidden marquee-wrap w-full">
       <div className={reverse ? 'marquee-track-reverse' : 'marquee-track'}>
-        {doubled.map((s, i) => (
+        {tripled.map((s, i) => (
           <LogoCard key={`${s.name}-${i}`} {...s} />
         ))}
       </div>
@@ -108,15 +109,14 @@ export default function Sponsors() {
         <Section className="text-center px-6 mb-14">
           <div className="inline-block border border-white/25 text-white/80  tracking-[0.2em] px-4 py-1.5 rounded-full mb-4
                           bg-white/10 backdrop-blur-sm">
-            Mitra & Kerja Sama
+           Mitra & Kolaborasi
           </div>
           <h2 className="font-display text-4xl lg:text-5xl font-black text-white mb-4">
             Dipercaya & Bermitra dengan{' '}
             <em className="not-italic text-green-400">Institusi Terkemuka</em>
           </h2>
           <p className="text-white/60 text-base max-w-2xl mx-auto leading-relaxed">
-            Greenvilla menjalin kerjasama strategis dengan berbagai instansi pemerintah,
-            perbankan, dan asosiasi profesional untuk memberikan layanan terbaik bagi klien kami.
+            Kami menjalin kerja sama strategis dengan berbagai instansi pemerintah, lembaga keuangan, serta asosiasi profesional untuk memastikan setiap proses perizinan berjalan lancar, cepat, dan sesuai regulasi yang berlaku.
           </p>
         </Section>
 

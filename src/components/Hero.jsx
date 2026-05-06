@@ -80,7 +80,7 @@ export default function Hero() {
             Legalin Bali <em className="not-italic text-green-400">Solusi Legalitas</em> Usaha Anda
           </h1>
 
-          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">Kami menghadirkan berbagai legalitas usaha. tanpa melanggar aturan.</p>
+          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">Kami membantu Anda mengurus seluruh perizinan usaha secara profesional dan sesuai regulasi, sehingga bisnis Anda dapat berjalan dengan aman dan tanpa hambatan.</p>
 
           <div className="flex flex-wrap gap-4 mb-12">
             <a href="/tentang">
@@ -105,7 +105,7 @@ export default function Hero() {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-7 animate-float">
               <div className="w-full h-72 rounded-2xl mb-5 overflow-hidden relative bg-green-700">
-                <img src="../public/img/DepanLegalin.png" className="w-full h-full object-cover" />
+                <img src="/img/Legalin Bali Google Maps.png" className="w-full h-full object-cover" />
               </div>
 
               <h2 className="text-white font-bold text-xl mb-1">Legalin Bali</h2>
@@ -130,7 +130,7 @@ export default function Hero() {
               style={{ animationDelay: "1s" }}
             >
               <div className="w-9 h-9 rounded-xl bg-green-100 flex items-center justify-center text-lg">
-                <img src="../public/img/point.png" alt="" className="w-4" />
+                <img src="/img/point.png" alt="" className="w-4" />
               </div>
               <div>
                 <div className="text-xs font-bold text-dark">{SLIDES[current].label.replace(/^[^ ]+ /, "")}</div>

@@ -38,7 +38,7 @@ export default function CTA() {
               >
                 Konsultasi Gratis
               </button>
-              <a href="/properti">
+              <a href="/proyek">
                 <button className="btn-outline-white">Lihat Semua Proyek →</button>
               </a>
             </div>

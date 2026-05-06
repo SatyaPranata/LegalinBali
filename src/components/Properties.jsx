@@ -4,10 +4,10 @@ import Section from './Section'
 const PROPERTIES = [
   {
     tag:   'PBG & SLF',
-    name:  'Villa Sentul Hijau',
-    loc:   'Sentul, Bogor',
+    name:  'B Hotel',
+    loc:   'Denpasar, Selatan',
     desc:  'Hunian mewah dengan taman tropis, panel surya 10 kWp, dan sistem pengolahan air mandiri.',
-    price: 'Rp 3,2 M',
+    price: 'Rp 3,2 M ',
     img: '/img/b hotel.jpg'
   },
   {
@@ -138,7 +138,7 @@ export default function Properties() {
         </div>
 
         <Section className="text-center mt-12">
-          <a href="/properti">
+          <a href="/proyek">
           <button className="btn-outline-green">Lihat Semua Properti →</button>
           </a>
         </Section>

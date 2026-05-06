@@ -7,10 +7,9 @@ const FOOTER_LINKS = {
 }
 
 const SOCIALS = [
-  { label: '📘', name: 'Facebook' },
-  { label: '📷', name: 'Instagram' },
-  { label: '🐦', name: 'Twitter' },
-  { label: '▶️',  name: 'YouTube' },
+  { label: '/img/.svg', name: 'Instagram', href: ''},
+  { label: '/img/.svg', name: 'Gmail', href: ''},
+  { label: '/img/.svg',  name: 'Google Maps', href: ''},
 ]
 
 export default function Footer() {
@@ -26,7 +25,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <span className="font-display text-2xl font-black text-white block mb-3">
-                Green<span className="text-green-400">villa</span>
+                <img src="/img/logolegalinbulet.svg" alt="Legalin Bali" className='w-48'/>
               </span>
               <p className="text-white/45 text-sm leading-relaxed mb-5">
                 Membangun hunian ramah lingkungan untuk generasi yang lebih baik.

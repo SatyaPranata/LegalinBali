@@ -2,19 +2,19 @@ import Section from "./Section";
 
 const FEATURES = [
   {
-    icon: "🌞",
-    title: "Panel Surya Terintegrasi",
-    desc: "Energi bersih untuk kebutuhan sehari-hari tanpa tagihan listrik berlebih.",
+    icon: "/img/icon-timer.svg",
+    title: "Proses Cepat & Transparan",
+    desc: "Kami memastikan setiap tahapan jelas, terarah, dan mudah dipahami.",
   },
   {
-    icon: "💧",
-    title: "Sistem Daur Ulang Air",
-    desc: "Teknologi pengolahan air hujan untuk efisiensi maksimal penggunaan air.",
+    icon: "/img/icon-personal.svg",
+    title: "Didampingi Tim Profesional",
+    desc: "Berpengalaman dalam berbagai jenis perizinan usaha di Indonesia.",
   },
   {
-    icon: "🌱",
-    title: "Material Ramah Lingkungan",
-    desc: "Konstruksi menggunakan bahan-bahan alami dan bersertifikasi ekologis internasional.",
+    icon: "/img/icon-keamanan.svg",
+    title: "Aman & Sesuai Regulasi",
+    desc: "Minim risiko kesalahan yang dapat menghambat operasional bisnis Anda.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function About() {
           </img>
 
           {/* Accent card */}
-          <img src="../public/img/Gambar Arsitek.jpg"
+          <img src="/img/Gambar Arsitek.jpg"
             className="absolute bottom-0 right-0 w-[55%] h-60 rounded-2xl overflow-hidden
                        bg-gradient-to-br 
                        flex items-center justify-center text-6xl
@@ -69,10 +69,10 @@ export default function About() {
         {/* ── Text content ── */}
         <Section delay={150}>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Tentang Legalin Bali</p>
-          <h2 className="font-display text-4xl lg:text-5xl font-black text-dark leading-[1.1] mb-5">Properti Impian dengan Konsep Keberlanjutan</h2>
+          <h2 className="font-display text-4xl lg:text-4xl font-black text-dark leading-[1.1] mb-5">Konsultan Perizinan Usaha yang Siap Mengembangkan Bisnis Anda</h2>
           <p className="text-gray-500 text-base leading-relaxed mb-8 max-w-xl">
-            Greenvilla hadir sebagai solusi hunian modern yang mengedepankan keseimbangan antara kenyamanan hidup dan kelestarian alam. Setiap properti kami dirancang dengan standar
-            <span className="text-green-600 font-semibold"> green building internasional</span>, menghadirkan harmoni sempurna antara arsitektur kontemporer dan ekosistem alami.
+           Legalin Bali memberikan solusi lengkap untuk kebutuhan perizinan usaha Anda.
+           Tanpa proses rumit, tanpa kebingungan—kami pastikan bisnis Anda berjalan sesuai regulasi yang berlaku.  
           </p>
 
           <div className="flex flex-col gap-5 mb-9">
@@ -83,7 +83,11 @@ export default function About() {
                              text-xl flex-shrink-0 group-hover:bg-green-600
                              transition-colors duration-300"
                 >
-                  {icon}
+                  <img
+                    src={icon}
+                    alt={title}
+                    className="w-7 h-7 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                  />
                 </div>
                 <div>
                   <h4 className="font-semibold text-dark text-sm mb-1">{title}</h4>
@@ -94,8 +98,12 @@ export default function About() {
           </div>
 
           <div className="flex flex-wrap gap-4">
+            <a href="/layanan">
             <button className="btn-primary">Layanan Kami</button>
+            </a>
+            <a href="/tentang#timkami">
             <button className="btn-outline-green">Tim Kami →</button>
+            </a>
           </div>
         </Section>
       </div>

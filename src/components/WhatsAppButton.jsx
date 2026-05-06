@@ -14,7 +14,7 @@ export default function WhatsAppButton({ number = '628111234567', message = 'Hal
                        px-3 py-2 rounded-xl whitespace-nowrap shadow-lg
                        opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0
                        transition-all duration-200 pointer-events-none">
-        Chat dengan kami 💬
+        Chat dengan kami 
         <div className="absolute top-full right-4 border-4 border-transparent border-t-dark" />
       </div>
 
