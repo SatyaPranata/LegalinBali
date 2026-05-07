@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Section from "../components/Section";
 
 const TABS = ["Semua", "Villa", "Rumah", "Cluster", "Kavling"];
 
+// Data properties — id harus match dengan ProyekDetail.jsx
 const PROPERTIES = [
   {
+    id: "villa-sentul-hijau",
     emoji: "🏡",
     tag: "Eco Certified",
     name: "Villa Sentul Hijau",
@@ -19,6 +21,7 @@ const PROPERTIES = [
     type: "Villa",
   },
   {
+    id: "rumah-bogor-asri",
     emoji: "🌿",
     tag: "Sustainable",
     name: "Rumah Bogor Asri",
@@ -32,6 +35,7 @@ const PROPERTIES = [
     type: "Rumah",
   },
   {
+    id: "cluster-depok-lestari",
     emoji: "🏘️",
     tag: "Cluster Green",
     name: "Cluster Depok Lestari",
@@ -45,6 +49,7 @@ const PROPERTIES = [
     type: "Cluster",
   },
   {
+    id: "kavling-cisarua-asri",
     emoji: "🌾",
     tag: "Prime Land",
     name: "Kavling Cisarua Asri",
@@ -58,6 +63,7 @@ const PROPERTIES = [
     type: "Kavling",
   },
   {
+    id: "villa-puncak-elegan",
     emoji: "🏠",
     tag: "Best Seller",
     name: "Villa Puncak Elegan",
@@ -71,6 +77,7 @@ const PROPERTIES = [
     type: "Villa",
   },
   {
+    id: "rumah-bambu-cibinong",
     emoji: "🌳",
     tag: "Eco Living",
     name: "Rumah Bambu Cibinong",
@@ -85,7 +92,6 @@ const PROPERTIES = [
   },
 ];
 
-import { useEffect, useRef } from "react";
 function useFadeInLocal() {
   const ref = useRef(null);
   useEffect(() => {
@@ -137,18 +143,19 @@ function PropertyCard({ prop, delay }) {
         <h3 className="font-display font-bold text-xl text-dark">{prop.name}</h3>
         <p className="text-xs text-gray-400 mt-0.5 mb-3">📍 {prop.loc}</p>
         <p className="text-gray-400 text-sm leading-relaxed mb-4">{prop.desc}</p>
-        <div className="flex gap-4 text-xs text-gray-500 border-t border-gray-100 pt-4 mb-5">
+        {/* <div className="flex gap-4 text-xs text-gray-500 border-t border-gray-100 pt-4 mb-5">
           {prop.beds > 0 && <span>🛏 {prop.beds} Kamar</span>}
           {prop.baths > 0 && <span>🚿 {prop.baths} KM</span>}
           <span>📐 {prop.area} m²</span>
-        </div>
-        <button
-          className="w-full bg-green-100 text-green-700 font-semibold py-3 rounded-2xl
-                           hover:bg-green-600 hover:text-white transition-all duration-200
-                           active:scale-95 text-sm"
+        </div> */}
+        <Link
+          to={`/proyek/${prop.id}`}
+          className="block w-full bg-green-100 text-green-700 font-semibold py-3 rounded-2xl
+                     hover:bg-green-600 hover:text-white transition-all duration-200
+                     active:scale-95 text-sm text-center"
         >
           Lihat Detail →
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -160,7 +167,9 @@ export default function Property() {
 
   const filtered = PROPERTIES.filter((p) => {
     const matchTab = activeTab === "Semua" || p.type === activeTab;
-    const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) || p.loc.toLowerCase().includes(search.toLowerCase());
+    const matchSearch =
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
+      p.loc.toLowerCase().includes(search.toLowerCase());
     return matchTab && matchSearch;
   });
 
@@ -168,23 +177,27 @@ export default function Property() {
     <>
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-green-700 via-green-600 to-green-400 overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "32px 32px" }}
+        />
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <Section>
-            <span
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white
-                             text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5"
-            >
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
               Katalog Legalin
             </span>
             <h1 className="font-display text-4xl lg:text-6xl font-black text-white mb-4">
               Legalitas Yang <em className="not-italic text-green-300">Kami</em> Kerjakan
             </h1>
             <p className="text-white/75 text-lg max-w-xl mx-auto mb-8">Pilihan legalitas yang kami kerjakan</p>
-            {/* Search */}
             <div className="max-w-lg mx-auto flex items-center bg-white rounded-full px-5 py-3 gap-3 shadow-xl">
               <span className="text-green-500">🔍</span>
-              <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama proyek anda..." className="flex-1 outline-none text-sm text-gray-700 placeholder:text-gray-400" />
+              <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Cari nama proyek anda..."
+                className="flex-1 outline-none text-sm text-gray-700 placeholder:text-gray-400"
+              />
             </div>
           </Section>
         </div>
@@ -198,7 +211,6 @@ export default function Property() {
       {/* Filter + Grid */}
       <section className="py-16 px-6 bg-green-100/50">
         <div className="max-w-7xl mx-auto">
-          {/* Tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {TABS.map((tab) => (
               <button
@@ -212,10 +224,8 @@ export default function Property() {
             ))}
           </div>
 
-          {/* Result count */}
           <p className="text-sm text-gray-400 mb-6 text-center">{filtered.length} properti ditemukan</p>
 
-          {/* Grid */}
           {filtered.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
               {filtered.map((prop, i) => (

@@ -42,8 +42,8 @@ export default function Navbar() {
             const active = location.pathname === link.path;
             return (
               <li key={link.name}>
-                <Link
-                  to={link.path}
+                <a
+                  href={link.path}
                   className={`text-sm font-medium transition-colors duration-200 relative group
                               ${active ? "text-green-600" : "text-gray-600 hover:text-green-600"}`}
                 >
@@ -53,7 +53,7 @@ export default function Navbar() {
                                    transition-all duration-300
                                    ${active ? "w-full" : "w-0 group-hover:w-full"}`}
                   />
-                </Link>
+                </a>
               </li>
             );
           })}

@@ -6,6 +6,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Home from "./pages/Home";
 import Proyek from "./pages/Proyek";
+import ProyekDetail from "./pages/ProyekDetail";
 import Layanan from "./pages/Layanan";
 import TentangKami from "./pages/TentangKami";
 import Kontak from "./pages/Kontak";
@@ -19,6 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/proyek" element={<Proyek />} />
+          <Route path="/proyek/:id" element={<ProyekDetail />} />
           <Route path="/layanan" element={<Layanan />} />
           <Route path="/tentang" element={<TentangKami />} />
           <Route path="/kontak" element={<Kontak />} />
