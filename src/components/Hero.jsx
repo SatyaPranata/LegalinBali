@@ -105,7 +105,7 @@ export default function Hero() {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-7 animate-float">
               <div className="w-full h-72 rounded-2xl mb-5 overflow-hidden relative bg-green-700">
-                <img src="/img/Legalin Bali Google Maps.png" className="w-full h-full object-cover" />
+                <img src="/img/meetinglegalin.jpg" className="w-full h-full object-cover" />
               </div>
 
               <h2 className="text-white font-bold text-xl mb-1">Legalin Bali</h2>

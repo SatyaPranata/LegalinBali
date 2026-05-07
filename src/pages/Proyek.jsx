@@ -2,37 +2,37 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Section from "../components/Section";
 
-const TABS = ["Semua", "Villa", "Rumah", "Cluster", "Kavling"];
+const TABS = ["Semua", "Villa", "Merek", "Hotel", "Rumah"];
 
 // Data properties — id harus match dengan ProyekDetail.jsx
 const PROPERTIES = [
   {
-    id: "villa-sentul-hijau",
+    id: "bhotel",
     emoji: "🏡",
-    tag: "Eco Certified",
-    name: "Villa Sentul Hijau",
-    loc: "Sentul, Bogor",
+    tag: "PBG & SLF",
+    name: "B Hotel",
+    loc: "Denpasar, Bali",
     beds: 4,
     baths: 3,
     area: 280,
     desc: "Hunian mewah dengan taman tropis, panel surya 10 kWp, dan sistem pengolahan air mandiri.",
     price: "Rp 3,2 M",
-    color: "from-green-500 to-green-700",
-    type: "Villa",
+    img: "/img/b hotel.jpg",
+    type: "Hotel",
   },
   {
-    id: "rumah-bogor-asri",
+    id: "info-denpasar",
     emoji: "🌿",
-    tag: "Sustainable",
-    name: "Rumah Bogor Asri",
-    loc: "Bogor, Jawa Barat",
+    tag: "MEREK",
+    name: "Info Denpasar",
+    loc: "Denpasar, Bali",
     beds: 3,
     baths: 2,
     area: 180,
     desc: "Desain modern dengan konsep open living yang menyatu harmonis dengan alam sekitar.",
     price: "Rp 1,8 M",
-    color: "from-green-400 to-green-600",
-    type: "Rumah",
+    img: "/img/logoinfodenpasar.png",
+    type: "Merek",
   },
   {
     id: "cluster-depok-lestari",
@@ -45,7 +45,7 @@ const PROPERTIES = [
     area: 150,
     desc: "Kompleks perumahan ramah lingkungan dengan fasilitas komunitas taman hijau seluas 2 ha.",
     price: "Rp 1,2 M",
-    color: "from-green-300 to-green-500",
+    img: "/img/b hotel.jpg",
     type: "Cluster",
   },
   {
@@ -59,7 +59,7 @@ const PROPERTIES = [
     area: 500,
     desc: "Kavling tanah strategis di kawasan pegunungan dengan udara segar dan pemandangan hijau.",
     price: "Rp 900 Jt",
-    color: "from-green-200 to-green-400",
+    img: "/img/b hotel.jpg",
     type: "Kavling",
   },
   {
@@ -73,7 +73,7 @@ const PROPERTIES = [
     area: 350,
     desc: "Villa premium di ketinggian 1.200 mdpl, lengkap dengan kolam renang air gunung alami.",
     price: "Rp 5,5 M",
-    color: "from-green-600 to-green-800",
+    img: "/img/b hotel.jpg",
     type: "Villa",
   },
   {
@@ -87,7 +87,7 @@ const PROPERTIES = [
     area: 160,
     desc: "Rumah unik berbahan bambu bersertifikasi dengan desain kontemporer dan efisiensi energi tinggi.",
     price: "Rp 1,4 M",
-    color: "from-green-400 to-green-700",
+    img: "/img/b hotel.jpg",
     type: "Rumah",
   },
 ];
@@ -121,24 +121,16 @@ function PropertyCard({ prop, delay }) {
                  shadow-sm shadow-green-600/5 border border-gray-100"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div
-        className={`h-52 bg-gradient-to-br ${prop.color} flex items-center justify-center
-                       text-7xl relative`}
-      >
-        {prop.emoji}
-        <span
-          className="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold
-                         uppercase tracking-wide px-3 py-1 rounded-full"
-        >
-          {prop.tag}
-        </span>
-        <span
-          className="absolute top-4 right-4 bg-white text-green-700 text-xs font-black
-                         px-3 py-1 rounded-full shadow"
-        >
-          {prop.price}
-        </span>
-      </div>
+<div className="relative h-52 overflow-hidden">
+  <img src={prop.img} alt={prop.name} className="w-full h-full object-cover" />
+  
+          <span
+            className="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold
+                           uppercase tracking-wide px-3 py-1 rounded-full"
+          >
+            {prop.tag}
+          </span>
+</div>
       <div className="p-6">
         <h3 className="font-display font-bold text-xl text-dark">{prop.name}</h3>
         <p className="text-xs text-gray-400 mt-0.5 mb-3">📍 {prop.loc}</p>
