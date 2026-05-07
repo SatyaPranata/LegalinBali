@@ -9,6 +9,7 @@ const PROPERTIES = [
     desc: "Hunian mewah dengan taman tropis, panel surya 10 kWp, dan sistem pengolahan air mandiri.",
     price: "Rp 3,2 M ",
     img: "/img/b hotel.jpg",
+    url: "/proyek/bhotel",
   },
   {
     tag: "Merek",
@@ -17,6 +18,7 @@ const PROPERTIES = [
     desc: "Desain modern dengan konsep open living yang menyatu harmonis dengan alam sekitar.",
     price: "Rp 1,8 M",
     img: "/img/logoinfodenpasar.png",
+    url: "/proyek/info-denpasar",
   },
   {
     tag: "PBG",
@@ -25,6 +27,7 @@ const PROPERTIES = [
     desc: "Kompleks perumahan ramah lingkungan dengan fasilitas komunitas taman hijau seluas 2 ha.",
     price: "Rp 1,2 M",
     img: "/img/b hotel.jpg",
+    url: "/proyek/cluster-depok-lestari",
   },
 ];
 
@@ -71,13 +74,15 @@ function PropertyCard({ prop, delay }) {
 
         <p className="text-gray-400 text-sm leading-relaxed my-4">{prop.desc}</p>
 
-        <button
-          className="w-full bg-green-100 text-green-700 font-semibold py-3 rounded-2xl
+        <a href={prop.url}>
+          <button
+            className="w-full bg-green-100 text-green-700 font-semibold py-3 rounded-2xl
           hover:bg-green-600 hover:text-white transition-all duration-200
           active:scale-95 text-sm"
-        >
-          Lihat Detail →
-        </button>
+          >
+            Lihat Detail →
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -114,8 +119,8 @@ export default function Properties() {
         {/* Header */}
         <Section className="text-center mb-12">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Proyek Kami</p>
-          <h2 className="font-display text-4xl lg:text-5xl font-black text-dark mb-4">Temukan Hunian Idaman Anda</h2>
-          <p className="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">Koleksi properti eco-friendly terbaik dengan lokasi strategis dan fasilitas green building lengkap.</p>
+          <h2 className="font-display text-4xl lg:text-5xl font-black text-dark mb-4">Wujudkan Bisnis Legal dengan Lebih Mudah</h2>
+          <p className="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">Pendampingan legalitas usaha terpercaya untuk membantu bisnis Anda berkembang aman, profesional, dan sesuai regulasi di Bali.</p>
 
           {/* Tabs */}
           {/* <div className="flex flex-wrap justify-center gap-2 mt-8">
@@ -143,7 +148,7 @@ export default function Properties() {
 
         <Section className="text-center mt-12">
           <a href="/proyek">
-            <button className="btn-outline-green">Lihat Semua Properti →</button>
+            <button className="btn-outline-green">Lihat Semua Proyek →</button>
           </a>
         </Section>
       </div>

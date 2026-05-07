@@ -121,16 +121,16 @@ function PropertyCard({ prop, delay }) {
                  shadow-sm shadow-green-600/5 border border-gray-100"
       style={{ transitionDelay: `${delay}ms` }}
     >
-<div className="relative h-52 overflow-hidden">
-  <img src={prop.img} alt={prop.name} className="w-full h-full object-cover" />
-  
-          <span
-            className="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold
+      <div className="relative h-52 overflow-hidden">
+        <img src={prop.img} alt={prop.name} className="w-full h-full object-cover" />
+
+        <span
+          className="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold
                            uppercase tracking-wide px-3 py-1 rounded-full"
-          >
-            {prop.tag}
-          </span>
-</div>
+        >
+          {prop.tag}
+        </span>
+      </div>
       <div className="p-6">
         <h3 className="font-display font-bold text-xl text-dark">{prop.name}</h3>
         <p className="text-xs text-gray-400 mt-0.5 mb-3">📍 {prop.loc}</p>
@@ -159,9 +159,7 @@ export default function Property() {
 
   const filtered = PROPERTIES.filter((p) => {
     const matchTab = activeTab === "Semua" || p.type === activeTab;
-    const matchSearch =
-      p.name.toLowerCase().includes(search.toLowerCase()) ||
-      p.loc.toLowerCase().includes(search.toLowerCase());
+    const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) || p.loc.toLowerCase().includes(search.toLowerCase());
     return matchTab && matchSearch;
   });
 
@@ -169,27 +167,17 @@ export default function Property() {
     <>
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-green-700 via-green-600 to-green-400 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "32px 32px" }}
-        />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <Section>
-            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
-              Katalog Legalin
-            </span>
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">Katalog Legalin</span>
             <h1 className="font-display text-4xl lg:text-6xl font-black text-white mb-4">
               Legalitas Yang <em className="not-italic text-green-300">Kami</em> Kerjakan
             </h1>
             <p className="text-white/75 text-lg max-w-xl mx-auto mb-8">Pilihan legalitas yang kami kerjakan</p>
             <div className="max-w-lg mx-auto flex items-center bg-white rounded-full px-5 py-3 gap-3 shadow-xl">
-              <span className="text-green-500">🔍</span>
-              <input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Cari nama proyek anda..."
-                className="flex-1 outline-none text-sm text-gray-700 placeholder:text-gray-400"
-              />
+              <img src="/img/icon-search.svg" alt="search" className="w-6 h-6" />
+              <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama proyek anda..." className="flex-1 outline-none text-sm text-gray-700 placeholder:text-gray-400" />
             </div>
           </Section>
         </div>

@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import Section from "./Section";
 
 const STATS = [
-  { num: "500+", label: "Properti" },
-  { num: "98%", label: "Klien Puas" },
-  { num: "12+", label: "Tahun Pengalaman" },
+  { num: "100+", label: "Legalitas" },
+  { num: "100%", label: "Klien Puas" },
+  { num: "5+", label: "Tahun Pengalaman" },
 ];
 
 const SLIDES = [
@@ -80,7 +80,9 @@ export default function Hero() {
             Legalin Bali <em className="not-italic text-green-400">Solusi Legalitas</em> Usaha Anda
           </h1>
 
-          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">Kami membantu Anda mengurus seluruh perizinan usaha secara profesional dan sesuai regulasi, sehingga bisnis Anda dapat berjalan dengan aman dan tanpa hambatan.</p>
+          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-9 max-w-lg">
+            Kami membantu Anda mengurus seluruh perizinan usaha secara profesional dan sesuai regulasi, sehingga bisnis Anda dapat berjalan dengan aman dan tanpa hambatan.
+          </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
             <a href="/tentang">
