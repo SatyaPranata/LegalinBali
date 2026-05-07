@@ -60,7 +60,7 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <a href="#">
+        <a href="/kontak">
           <btn className="hidden md:block btn-primary text-sm">Konsultasi Sekarang</btn>
         </a>
 
@@ -90,9 +90,9 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <Link to="/kontak" className="btn-primary text-sm w-full mt-2 block text-center">
+            <a href="/kontak" className="btn-primary text-sm w-full mt-2 block text-center">
               Konsultasi Sekarang
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

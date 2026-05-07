@@ -43,8 +43,12 @@ export default function Services() {
               Dari tahap awal hingga bisnis Anda siap berjalan, kami mendampingi setiap proses perizinan dengan sistem yang terstruktur, cepat, dan sesuai regulasi. Fokus Anda pada bisnis, urusan legalitas biar kami yang tangani.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="btn-primary">Lihat Semua Layanan Kami</button>
-              <button className="btn-outline-green">Hubungi Kami</button>
+              <a href="/layanan">
+                <button className="btn-primary">Lihat Semua Layanan Kami</button>
+              </a>
+              <a href="/kontak">
+                <button className="btn-outline-green">Hubungi Kami</button>
+              </a>
             </div>
           </Section>
 
@@ -63,11 +67,7 @@ export default function Services() {
                     className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center
                                text-2xl mb-4 group-hover:bg-green-600 transition-colors duration-300"
                   >
-                    <img
-                    src={icon}
-                    alt={title}
-                    className="w-7 h-7 group-hover:brightness-0 group-hover:invert transition-all duration-300"
-                  />
+                    <img src={icon} alt={title} className="w-7 h-7 group-hover:brightness-0 group-hover:invert transition-all duration-300" />
                   </div>
                   <h4 className="font-bold text-dark text-sm mb-2">{title}</h4>
                   <p className="text-gray-400 text-xs leading-relaxed">{desc}</p>
