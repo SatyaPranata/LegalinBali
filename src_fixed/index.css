@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #f8f5f0;
+    color: #374151;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .section-animate {
+    @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
+  }
+  .section-animate.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .btn-primary {
+    @apply bg-green-700 text-white font-semibold px-7 py-3 rounded-full
+           transition-all duration-200 hover:bg-green-500 hover:-translate-y-0.5
+           hover:shadow-lg hover:shadow-green-600/30 active:scale-95;
+  }
+  .btn-outline-white {
+    @apply border-2 border-white/40 text-white font-semibold px-7 py-3 rounded-full
+           transition-all duration-200 hover:border-white hover:bg-white/10 active:scale-95;
+  }
+  .btn-outline-green {
+    @apply border-2 border-green-600 text-green-600 font-semibold px-7 py-3 rounded-full
+           transition-all duration-200 hover:bg-green-600 hover:text-white active:scale-95;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f5f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #52b788;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d6a4f;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+
+/* Pause saat hover */
+.marquee-wrap:hover .marquee-track,
+.marquee-wrap:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}

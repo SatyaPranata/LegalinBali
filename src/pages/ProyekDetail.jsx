@@ -21,14 +21,26 @@ export const PROPERTIES = [
     artikel: [
       { type: "lead", text: "Di lereng bukit Sentul yang rimbun, berdiri sebuah villa yang bukan sekadar hunian — melainkan sebuah pernyataan tentang bagaimana manusia seharusnya hidup berdampingan dengan alam." },
       { type: "heading", text: "Asal Mula: Tanah Warisan yang Bertransformasi" },
-      { type: "paragraph", text: "Villa Sentul Hijau berdiri di atas lahan seluas 350 m² yang dulunya adalah kebun kopi milik keluarga Pak Hendra Gunawan sejak tahun 1970-an. Selama lebih dari tiga dekade, tanah itu hanya ditanami pohon kopi robusta dan beberapa pohon sengon. Namun pada 2019, putra sulung Pak Hendra yang berprofesi sebagai arsitek memiliki visi berbeda: mengubah warisan keluarga itu menjadi hunian premium yang tetap menghormati alam." },
-      { type: "paragraph", text: "Proses perencanaan memakan waktu hampir dua tahun. Sang arsitek, Andika Gunawan, melakukan riset mendalam ke beberapa proyek eco-resort di Ubud dan Lombok sebelum akhirnya merancang konsep yang unik: rumah yang 'tumbuh dari bumi', bukan ditancapkan di atasnya." },
+      {
+        type: "paragraph",
+        text: "Villa Sentul Hijau berdiri di atas lahan seluas 350 m² yang dulunya adalah kebun kopi milik keluarga Pak Hendra Gunawan sejak tahun 1970-an. Selama lebih dari tiga dekade, tanah itu hanya ditanami pohon kopi robusta dan beberapa pohon sengon. Namun pada 2019, putra sulung Pak Hendra yang berprofesi sebagai arsitek memiliki visi berbeda: mengubah warisan keluarga itu menjadi hunian premium yang tetap menghormati alam.",
+      },
+      {
+        type: "paragraph",
+        text: "Proses perencanaan memakan waktu hampir dua tahun. Sang arsitek, Andika Gunawan, melakukan riset mendalam ke beberapa proyek eco-resort di Ubud dan Lombok sebelum akhirnya merancang konsep yang unik: rumah yang 'tumbuh dari bumi', bukan ditancapkan di atasnya.",
+      },
       { type: "quote", text: "Kami tidak ingin menghancurkan pohon-pohon tua yang sudah ada. Justru desainnya kami sesuaikan mengikuti posisi pohon-pohon itu.", author: "Andika Gunawan, Arsitek & Pemilik" },
       { type: "heading", text: "Proses Konstruksi yang Tak Biasa" },
-      { type: "paragraph", text: "Pembangunan dimulai pada Januari 2021 dan selesai Agustus 2022 — jauh lebih lama dari konstruksi villa konvensional. Ini bukan keterlambatan, melainkan kesengajaan. Tim konstruksi yang dipilih adalah pengrajin lokal dari desa Citeureup yang masih menggunakan teknik bangunan tradisional Sunda, dipadukan dengan teknologi modern." },
+      {
+        type: "paragraph",
+        text: "Pembangunan dimulai pada Januari 2021 dan selesai Agustus 2022 — jauh lebih lama dari konstruksi villa konvensional. Ini bukan keterlambatan, melainkan kesengajaan. Tim konstruksi yang dipilih adalah pengrajin lokal dari desa Citeureup yang masih menggunakan teknik bangunan tradisional Sunda, dipadukan dengan teknologi modern.",
+      },
       { type: "highlight", text: "Panel surya 10 kWp yang terpasang di atap mampu memenuhi 80% kebutuhan listrik villa, sisa energi disimpan dalam baterai lithium yang bisa bertahan hingga 12 jam tanpa sinar matahari." },
       { type: "heading", text: "Sertifikasi Hijau dan Legalitas" },
-      { type: "paragraph", text: "Villa ini telah mendapatkan sertifikasi Green Building dari Kementerian PUPR pada 2023. Tim Legalin Bali membantu proses pengurusan IMB (kini PBG) yang membutuhkan persetujuan khusus karena lokasinya berada di zona kawasan lindung parsial." },
+      {
+        type: "paragraph",
+        text: "Villa ini telah mendapatkan sertifikasi Green Building dari Kementerian PUPR pada 2023. Tim Legalin Bali membantu proses pengurusan IMB (kini PBG) yang membutuhkan persetujuan khusus karena lokasinya berada di zona kawasan lindung parsial.",
+      },
     ],
   },
   {
@@ -50,11 +62,21 @@ export const PROPERTIES = [
     artikel: [
       { type: "lead", text: "Ketika kebanyakan pengembang berlomba membangun setinggi-tingginya, Rumah Bogor Asri justru memilih untuk merangkul tanah dan membiarkan alam menjadi dinding yang sesungguhnya." },
       { type: "heading", text: "Bermula dari Keresahan Seorang Ibu" },
-      { type: "paragraph", text: "Ide Rumah Bogor Asri lahir dari keresahan Ibu Ratna Dewi, seorang guru sekolah dasar yang merasa anak-anaknya terlalu banyak menghabiskan waktu di dalam ruangan. Di tahun 2021, ia mulai mencari lahan di pinggiran Bogor dengan satu syarat sederhana: ada pohon besar di dalamnya." },
-      { type: "quote", text: "Pohon mangga itu yang pertama kali membuat saya jatuh cinta dengan lahan ini. Saya bilang ke arsitek: pohon itu tidak boleh ditebang, desain rumahnya yang harus menyesuaikan.", author: "Ibu Ratna Dewi, Pemilik" },
+      {
+        type: "paragraph",
+        text: "Ide Rumah Bogor Asri lahir dari keresahan Ibu Ratna Dewi, seorang guru sekolah dasar yang merasa anak-anaknya terlalu banyak menghabiskan waktu di dalam ruangan. Di tahun 2021, ia mulai mencari lahan di pinggiran Bogor dengan satu syarat sederhana: ada pohon besar di dalamnya.",
+      },
+      {
+        type: "quote",
+        text: "Pohon mangga itu yang pertama kali membuat saya jatuh cinta dengan lahan ini. Saya bilang ke arsitek: pohon itu tidak boleh ditebang, desain rumahnya yang harus menyesuaikan.",
+        author: "Ibu Ratna Dewi, Pemilik",
+      },
       { type: "highlight", text: "Pohon mangga berusia 30 tahun kini berdiri di tengah teras belakang, dilindungi oleh atap kaca yang dirancang khusus agar akarnya tetap mendapat air hujan." },
       { type: "heading", text: "Perjalanan Legalitas yang Mengajarkan Kesabaran" },
-      { type: "paragraph", text: "Proses balik nama dari pemilik lama ke Bu Ratna sempat terganjal karena sertifikat tanah masih atas nama almarhum ayah dari penjual. Legalin Bali turun tangan mengurus proses waris terlebih dahulu di pengadilan, dilanjutkan dengan balik nama, hingga akhirnya AJB bisa ditandatangani di hadapan notaris." },
+      {
+        type: "paragraph",
+        text: "Proses balik nama dari pemilik lama ke Bu Ratna sempat terganjal karena sertifikat tanah masih atas nama almarhum ayah dari penjual. Legalin Bali turun tangan mengurus proses waris terlebih dahulu di pengadilan, dilanjutkan dengan balik nama, hingga akhirnya AJB bisa ditandatangani di hadapan notaris.",
+      },
     ],
   },
   // {
@@ -165,17 +187,11 @@ function SidebarCard({ prop }) {
     >
       {/* Thumbnail kecil */}
       <div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden">
-        <img
-          src={prop.img}
-          alt={prop.name}
-          className="w-full h-full object-cover"
-        />
+        <img src={prop.img} alt={prop.name} className="w-full h-full object-cover" />
       </div>
       {/* Info */}
       <div className="flex-1 min-w-0">
-        <p className="font-semibold text-dark text-sm leading-tight truncate group-hover:text-green-700 transition-colors">
-          {prop.name}
-        </p>
+        <p className="font-semibold text-dark text-sm leading-tight truncate group-hover:text-green-700 transition-colors">{prop.name}</p>
         <p className="text-xs text-gray-400 mt-0.5 truncate">📍 {prop.loc}</p>
         <p className="text-xs font-bold text-green-600 mt-1">{prop.price}</p>
       </div>
@@ -200,7 +216,9 @@ export default function ProyekDetail() {
         <div className="text-6xl mb-4">🔍</div>
         <h1 className="text-2xl font-bold text-dark mb-2">Properti tidak ditemukan</h1>
         <p className="text-gray-400 mb-6">Halaman yang Anda cari tidak ada.</p>
-        <Link to="/proyek" className="btn-primary">← Kembali ke Proyek</Link>
+        <Link to="/proyek" className="btn-primary">
+          ← Kembali ke Proyek
+        </Link>
       </div>
     );
   }
@@ -211,11 +229,7 @@ export default function ProyekDetail() {
       <section className="relative pt-32 pb-16 px-6 overflow-hidden">
         {/* Background image dengan overlay gelap */}
         <div className="absolute inset-0">
-          <img
-            src={prop.img}
-            alt={prop.name}
-            className="w-full h-full object-cover"
-          />
+          <img src={prop.img} alt={prop.name} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70" />
         </div>
 
@@ -247,7 +261,6 @@ export default function ProyekDetail() {
       <section className="py-16 px-6" style={{ background: "#f8f5f0" }}>
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-10 items-start">
-
             {/* ── Kolom Kiri: Artikel ── */}
             <div className="flex-1 min-w-0">
               {/* Info singkat */}
@@ -264,11 +277,23 @@ export default function ProyekDetail() {
               <div className="space-y-6">
                 {prop.artikel.map((block, i) => {
                   if (block.type === "lead")
-                    return <p key={i} className="text-xl text-gray-700 leading-relaxed font-medium border-l-4 border-green-500 pl-5">{block.text}</p>;
+                    return (
+                      <p key={i} className="text-xl text-gray-700 leading-relaxed font-medium border-l-4 border-green-500 pl-5">
+                        {block.text}
+                      </p>
+                    );
                   if (block.type === "heading")
-                    return <h2 key={i} className="font-display text-2xl font-black text-dark pt-4">{block.text}</h2>;
+                    return (
+                      <h2 key={i} className="font-display text-2xl font-black text-dark pt-4">
+                        {block.text}
+                      </h2>
+                    );
                   if (block.type === "paragraph")
-                    return <p key={i} className="text-gray-600 leading-relaxed text-base">{block.text}</p>;
+                    return (
+                      <p key={i} className="text-gray-600 leading-relaxed text-base">
+                        {block.text}
+                      </p>
+                    );
                   if (block.type === "quote")
                     return (
                       <blockquote key={i} className="bg-green-50 border-l-4 border-green-500 rounded-r-2xl px-6 py-5 my-6">
@@ -287,21 +312,6 @@ export default function ProyekDetail() {
               </div>
 
               <div className="border-t border-gray-200 my-10" />
-
-              {/* CTA */}
-              <div className="bg-white rounded-3xl p-8 text-center shadow-sm border border-gray-100">
-                <div className="text-4xl mb-3">{prop.emoji}</div>
-                <h3 className="font-display text-2xl font-black text-dark mb-2">Tertarik dengan {prop.name}?</h3>
-                <p className="text-gray-400 text-sm mb-6">Tim Legalin Bali siap membantu proses legalitas dan pembelian Anda.</p>
-                <div className="flex flex-wrap gap-3 justify-center">
-                  <a href="https://wa.me/628111234567" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    💬 Hubungi Kami via WhatsApp
-                  </a>
-                  <Link to="/kontak" className="btn-outline-green">
-                    📋 Konsultasi Gratis
-                  </Link>
-                </div>
-              </div>
 
               <div className="mt-8 text-center">
                 <button onClick={() => navigate("/proyek")} className="text-green-600 hover:text-green-800 font-semibold text-sm transition-colors">
@@ -334,7 +344,6 @@ export default function ProyekDetail() {
                 </div>
               </div>
             </aside>
-
           </div>
         </div>
       </section>
