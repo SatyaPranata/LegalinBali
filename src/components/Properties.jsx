@@ -69,7 +69,7 @@ function PropertyCard({ prop, delay }) {
           <div>
             <h3 className="font-display font-bold text-xl text-dark">{prop.name}</h3>
             <p className="text-xs text-gray-400 mt-0.5 flex">
-              <img src="../public/img/point.png" className="h-4 me-1" /> {prop.loc}
+              <img src="/img/point.png" className="h-4 me-1" /> {prop.loc}
             </p>
           </div>
         </div>
