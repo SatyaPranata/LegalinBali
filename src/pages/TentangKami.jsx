@@ -179,34 +179,50 @@ export default function TentangKami() {
       </section>
 
       {/* Team */}
-      <section id="timkami" className="py-20 px-6 bg-cream">
-        <div className="max-w-7xl mx-auto">
-          <Section className="text-center mb-14">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Tim Kami</p>
-            <h2 className="font-display text-4xl font-black text-dark mb-4">Orang-Orang di Balik Legalin Bali</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Tim yang bersemangat mewujudkan Legalitas usaha anda</p>
-          </Section>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {TEAM.map(({ init, name, role, desc, emoji }, i) => (
-              <Section key={name} delay={i * 80}>
-                <div className="bg-white rounded-3xl p-7 card-hover border border-gray-100 shadow-sm text-center">
-                  <div
-                    className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-700
-                                   flex items-center justify-center text-white font-black text-2xl mx-auto mb-4
-                                   shadow-lg shadow-green-600/25"
-                  >
-                    {init}
-                  </div>
-                  {/* <div className="text-3xl mb-3">{emoji}</div> */}
-                  <h3 className="font-bold text-dark text-lg mb-1">{name}</h3>
-                  <div className="text-green-600 text-xs font-bold uppercase tracking-wider mb-3">{role}</div>
-                  {/* <p className="text-gray-400 text-sm leading-relaxed">{desc}</p> */}
-                </div>
-              </Section>
-            ))}
-          </div>
+ {/* Team */}
+<section id="timkami" className="py-20 px-6 bg-cream">
+  <div className="max-w-7xl mx-auto">
+    <Section className="text-center mb-14">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Tim Kami</p>
+      <h2 className="font-display text-4xl font-black text-dark mb-4">Orang-Orang di Balik Legalin Bali</h2>
+      <p className="text-gray-500 max-w-xl mx-auto">Tim yang bersemangat mewujudkan Legalitas usaha anda</p>
+    </Section>
+
+    {/* Direktur - 1 card di tengah */}
+    <Section className="flex justify-center mb-7">
+      <div className="bg-white rounded-3xl p-7 card-hover border border-gray-100 shadow-sm text-center w-72">
+        <div
+          className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-700
+                     flex items-center justify-center text-white font-black text-2xl mx-auto mb-4
+                     shadow-lg shadow-green-600/25"
+        >
+          {TEAM[0].init}
         </div>
-      </section>
+        <h3 className="font-bold text-dark text-lg mb-1">{TEAM[0].name}</h3>
+        <div className="text-green-600 text-xs font-bold uppercase tracking-wider">{TEAM[0].role}</div>
+      </div>
+    </Section>
+
+    {/* Staff - 3 card di bawah */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+      {TEAM.slice(1).map(({ init, name, role }, i) => (
+        <Section key={name} delay={i * 80}>
+          <div className="bg-white rounded-3xl p-7 card-hover border border-gray-100 shadow-sm text-center">
+            <div
+              className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-700
+                         flex items-center justify-center text-white font-black text-2xl mx-auto mb-4
+                         shadow-lg shadow-green-600/25"
+            >
+              {init}
+            </div>
+            <h3 className="font-bold text-dark text-lg mb-1">{name}</h3>
+            <div className="text-green-600 text-xs font-bold uppercase tracking-wider">{role}</div>
+          </div>
+        </Section>
+      ))}
+    </div>
+  </div>
+</section>
     </>
   );
 }

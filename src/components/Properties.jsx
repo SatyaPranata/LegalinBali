@@ -20,15 +20,15 @@ const PROPERTIES = [
     img: "/img/logoinfodenpasar.png",
     url: "/proyek/info-denpasar",
   },
-  {
-    tag: "PBG",
-    name: "Cluster Depok Lestari",
-    loc: "Depok, Jawa Barat",
-    desc: "Kompleks perumahan ramah lingkungan dengan fasilitas komunitas taman hijau seluas 2 ha.",
-    price: "Rp 1,2 M",
-    img: "/img/b hotel.jpg",
-    url: "/proyek/cluster-depok-lestari",
-  },
+  // {
+  //   tag: "PBG",
+  //   name: "Cluster Depok Lestari",
+  //   loc: "Depok, Jawa Barat",
+  //   desc: "Kompleks perumahan ramah lingkungan dengan fasilitas komunitas taman hijau seluas 2 ha.",
+  //   price: "Rp 1,2 M",
+  //   img: "/img/b hotel.jpg",
+  //   url: "/proyek/cluster-depok-lestari",
+  // },
 ];
 
 const TABS = ["Semua", "Villa", "Rumah", "Cluster", "Kavling"];
@@ -140,11 +140,13 @@ export default function Properties() {
         </Section>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {PROPERTIES.map((prop, i) => (
-            <PropertyCard key={prop.name} prop={prop} delay={i * 100} />
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center gap-7">
+  {PROPERTIES.map((prop, i) => (
+    <div key={prop.name} className="w-full md:w-[calc(50%-14px)] lg:w-[calc(33.333%-19px)]">
+      <PropertyCard prop={prop} delay={i * 100} />
+    </div>
+  ))}
+</div>
 
         <Section className="text-center mt-12">
           <a href="/proyek">

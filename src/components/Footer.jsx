@@ -1,15 +1,43 @@
+import { Link } from "react-router-dom";
 import Section from "./Section";
 
-const FOOTER_LINKS = {
-  Properti: ["Villa Eco", "Rumah Cluster", "Kavling Hijau", "Komersial", "Investasi"],
-  Layanan: ["Konstruksi", "Desain Lansekap", "Panel Surya", "Konsultasi", "Perawatan"],
-  Perusahaan: ["Tentang Kami", "Tim Kami", "Karir", "Press Kit", "Kontak"],
-};
+const FOOTER_LINKS = [
+  {
+    heading: "Properti",
+    links: [
+      { label: "B Hotel", url: "/proyek" },
+      { label: "Info Denpasar", url: "/proyek" },
+    ],
+  },
+  {
+    heading: "Layanan",
+    links: [
+      { label: "SLF & PBG", url: "/layanan" },
+      { label: "Pendaftaran Merek", url: "/layanan" },
+      { label: "Pembuatan NIB", url: "/layanan" },
+      { label: "Pembuatan PT / CV", url: "/layanan" },
+    ],
+  },
+  {
+    heading: "Perusahaan",
+    links: [
+      { label: "Tentang Kami", url: "/tentang" },
+      { label: "Tim Kami", url: "/tentang#timkami" },
+      { label: "Kontak", url: "/kontak" },
+    ],
+  },
+];
 
 const SOCIALS = [
   { label: "/img/icon-instagram.svg", name: "Instagram", href: "" },
   { label: "/img/icon-gmail.svg", name: "Gmail", href: "" },
   { label: "/img/icon-location.svg", name: "Google Maps", href: "" },
+];
+
+const BOTTOM_LINKS = [
+  { label: "Privasi", url: "/" },
+  { label: "Syarat & Ketentuan", url: "/" },
+  { label: "Cookie", url: "/" },
 ];
 
 export default function Footer() {
@@ -20,7 +48,7 @@ export default function Footer() {
           {/* Top grid */}
           <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12
-                          border-b border-white/10"
+                        border-b border-white/10"
           >
             {/* Brand */}
             <div className="lg:col-span-1">
@@ -28,25 +56,26 @@ export default function Footer() {
                 <img src="/img/logolegalinbulet.svg" alt="Legalin Bali" className="w-48" />
               </span>
               <p className="text-white/45 text-sm leading-relaxed mb-5">
-                Legalin Bali memberikan solusi lengkap untuk kebutuhan perizinan usaha Anda. Tanpa proses rumit, tanpa kebingungan—kami pastikan bisnis Anda berjalan sesuai regulasi yang berlaku.
+                Legalin Bali memberikan solusi lengkap untuk kebutuhan perizinan usaha Anda. Tanpa proses rumit, tanpa
+                kebingungan—kami pastikan bisnis Anda berjalan sesuai regulasi yang berlaku.
               </p>
 
               {/* Social icons */}
               <div className="flex gap-3">
                 {SOCIALS.map(({ label, name, href }) => (
-                  <a
-                    href={href}
+                  
+                  <a  href={href}
                     key={name}
                     aria-label={name}
                     className="group w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center
-                              hover:bg-green-600 transition-colors duration-200"
+                               hover:bg-green-600 transition-colors duration-200"
                   >
                     <img
                       src={label}
                       alt={name}
                       className="w-5 h-5 brightness-0 invert
-                                group-hover:brightness-100 group-hover:invert-0
-                                transition-all duration-300"
+                                 group-hover:brightness-100 group-hover:invert-0
+                                 transition-all duration-300"
                     />
                   </a>
                 ))}
@@ -54,18 +83,18 @@ export default function Footer() {
             </div>
 
             {/* Link columns */}
-            {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
+            {FOOTER_LINKS.map(({ heading, links }) => (
               <div key={heading}>
                 <h4 className="text-white font-semibold text-sm mb-5">{heading}</h4>
                 <ul className="space-y-3">
-                  {links.map((link) => (
-                    <li key={link}>
+                  {links.map(({ label, url }) => (
+                    <li key={label}>
                       <a
-                        href="#"
+                        href={url}
                         className="text-white/45 text-sm hover:text-green-400
                                    transition-colors duration-200"
                       >
-                        {link}
+                        {label}
                       </a>
                     </li>
                   ))}
@@ -78,13 +107,13 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8">
             <p className="text-white/30 text-xs">© 2020 Legalin Bali</p>
             <div className="flex gap-5">
-              {["Privasi", "Syarat & Ketentuan", "Cookie"].map((label) => (
-                <a key={label} href="#" className="text-white/30 text-xs hover:text-white/60 transition-colors">
+              {BOTTOM_LINKS.map(({ label, url }) => (
+                <a key={label} href={url} className="text-white/30 text-xs hover:text-white/60 transition-colors">
                   {label}
                 </a>
               ))}
             </div>
-            <p className="text-white/25 text-xs">Menyediakan Berbagai Macam Legalitas Untuk Usaha Anda</p>
+            <p className="text-white/25 text-xs">Legalin Bali</p>
           </div>
         </div>
       </Section>
