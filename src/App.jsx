@@ -30,7 +30,7 @@ export default function App() {
 
       {/* Floating buttons — scroll-to-top di atas WhatsApp */}
       <ScrollToTopButton />
-      <WhatsAppButton number="628111234567" />
+      <WhatsAppButton number="628197899910" />
     </Router>
   );
 }

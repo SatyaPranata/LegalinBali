@@ -12,10 +12,10 @@ const FOOTER_LINKS = [
   {
     heading: "Layanan",
     links: [
-      { label: "SLF & PBG", url: "/layanan" },
-      { label: "Pendaftaran Merek", url: "/layanan" },
-      { label: "Pembuatan NIB", url: "/layanan" },
-      { label: "Pembuatan PT / CV", url: "/layanan" },
+      { label: "SLF & PBG", url: "/layanan#legalitasusaha" },
+      { label: "Pendaftaran Merek", url: "/layanan#legalitasusaha" },
+      { label: "Pembuatan NIB", url: "/layanan#legalitasusaha" },
+      { label: "Pembuatan PT / CV", url: "/layanan#legalitasusaha" },
     ],
   },
   {
@@ -29,9 +29,9 @@ const FOOTER_LINKS = [
 ];
 
 const SOCIALS = [
-  { label: "/img/icon-instagram.svg", name: "Instagram", href: "" },
+  { label: "/img/icon-instagram.svg", name: "Instagram", href: "https://www.instagram.com/legalin.bali/" },
   { label: "/img/icon-gmail.svg", name: "Gmail", href: "" },
-  { label: "/img/icon-location.svg", name: "Google Maps", href: "" },
+  { label: "/img/icon-location.svg", name: "Google Maps", href: "https://share.google/sVZvuzycYp5EselDa" },
 ];
 
 const BOTTOM_LINKS = [

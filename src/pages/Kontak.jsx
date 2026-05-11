@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Section from "../components/Section";
 
 const WA_NUMBER = "628197899910"; // Ganti dengan nomor WA Anda
@@ -11,6 +12,9 @@ const FAQS = [
 ];
 
 export default function Kontak() {
+ useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   const [sent, setSent] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
@@ -34,10 +38,12 @@ ${form.message}`;
     setSent(true);
   };
 
+
+
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-green-700 via-green-600 to-green-400 overflow-hidden">
+      <section id="kontak" className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-green-700 via-green-600 to-green-400 overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <Section>
@@ -157,14 +163,14 @@ ${form.message}`;
             <div className="bg-green-600 rounded-3xl p-7 text-white">
               <h3 className="font-bold text-lg mb-5">Kontak Cepat</h3>
               <div className="space-y-4">
-                <a href="https://wa.me/628111234567" target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-all">
+                <a href="https://wa.me/628197899910" target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-all">
                   <img src="/img/icon-whatsapp.svg" alt="whatsapp" className="w-7 h-7" />
                   <div>
                     <div className="font-semibold text-sm">WhatsApp</div>
                     <div className="text-white/60 text-xs">(+62) 819-7899-910</div>
                   </div>
                 </a>
-                <a href="tel:02155551234" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-all">
+                <a href="tel:628197899910" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-all">
                   <img src="/img/icon-telepon.svg" alt="telepon" className="w-7 h-7" />
                   <div>
                     <div className="font-semibold text-sm">Telepon</div>

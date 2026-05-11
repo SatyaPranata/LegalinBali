@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Section from '../components/Section'
 
 const SERVICES = [
@@ -58,10 +59,24 @@ const PACKAGES = [
 ]
 
 export default function Layanan() {
+    const { hash } = useLocation();  // ← tambah ini
+useEffect(() => {
+      window.scrollTo(0, 0);
+    },);
+  useEffect(() => {                // ← tambah ini
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        },);
+      }
+    }
+  }, [hash]);
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-green-700 via-green-600 to-green-400 overflow-hidden">
+      <section id="layanan" className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-green-700 via-green-600 to-green-400 overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -152,7 +167,7 @@ export default function Layanan() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-6 bg-cream">
+      <section id="legalitasusaha" className="py-20 px-6 bg-cream">
         <div className="max-w-7xl mx-auto">
           <Section className="text-center mb-14">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Legalitas Usaha</p>

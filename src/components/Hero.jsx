@@ -38,7 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="beranda" className="relative min-h-screen flex items-center overflow-hidden">
       {SLIDES.map((slide, i) => (
         <div
           key={i}
@@ -86,10 +86,10 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <Link to="/tentang">
+            <Link to="/tentang/#tentang">
               <button className="btn-primary">Tentang Kami</button>
             </Link>
-            <Link to="/layanan">
+            <Link to="/layanan/#layanan">
               <button className="btn-outline-white">Layanan Kami</button>
             </Link>
           </div>

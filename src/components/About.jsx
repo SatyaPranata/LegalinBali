@@ -84,7 +84,7 @@ export default function About() {
             <Link to="/layanan">
               <button className="btn-primary">Layanan Kami</button>
             </Link>
-            <Link to="/tentang#timkami">
+            <Link to="/tentang/#timkami">
               <button className="btn-outline-green">Tim Kami →</button>
             </Link>
           </div>

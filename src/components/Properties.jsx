@@ -44,6 +44,9 @@ function useFadeInLocal() {
 }
 
 function PropertyCard({ prop, delay }) {
+     useEffect(() => {
+      window.scrollTo(0, 0);
+    },);
   const ref = useFadeInLocal();
   return (
     <div
@@ -113,7 +116,7 @@ export default function Properties() {
         </div>
 
         <Section className="text-center mt-12">
-          <Link to="/proyek">
+          <Link to="/proyek/#proyek">
             <button className="btn-outline-green">Lihat Semua Proyek →</button>
           </Link>
         </Section>
